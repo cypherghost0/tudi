@@ -1,0 +1,155 @@
+{
+  "Dashboard": {
+    "title": "Tableau de bord"
+  },
+  "Customers": {
+    "title": "Clients",
+    "description": "Gérez vos clients ici.",
+    "managementTitle": "Gestion des clients",
+    "addCustomer": "Ajouter un client",
+    "searchPlaceholder": "Rechercher des clients...",
+    "searchButton": "Rechercher",
+    "tableHeaderName": "Nom",
+    "tableHeaderEmail": "Email",
+    "tableHeaderPhone": "Téléphone",
+    "tableHeaderActions": "Actions",
+    "loading": "Chargement...",
+    "noCustomers": "Aucun client trouvé.",
+    "viewButton": "Voir",
+    "editButton": "Modifier",
+    "deleteButton": "Supprimer",
+    "formNameLabel": "Nom",
+    "formEmailLabel": "Email",
+    "formPhoneLabel": "Téléphone",
+    "saveButton": "Enregistrer",
+    "cancelButton": "Annuler",
+    "drawerClose": "Fermer",
+    "drawerTitle": "Détails du client",
+    "drawerNameLabel": "Nom:",
+    "drawerEmailLabel": "Email:",
+    "drawerPhoneLabel": "Téléphone:",
+    "deleteDialogTitle": "Supprimer le client",
+    "deleteDialogDescription": "Êtes-vous sûr de vouloir supprimer ce client? Cette action est irréversible.",
+    "deleteDialogCancel": "Annuler",
+    "deleteDialogConfirm": "Supprimer"
+  },
+  "Products": {
+    "title": "Produits",
+    "addProduct": "Ajouter un produit",
+    "editProduct": "Modifier le produit",
+    "addNewProduct": "Ajouter un nouveau produit",
+    "updateProduct": "Mettez à jour les détails du produit ci-dessous.",
+    "addNewProductDescription": "Remplissez le formulaire ci-dessous pour ajouter un nouveau produit à votre inventaire.",
+    "productManagement": "Gestion des produits",
+    "productManagementDescription": "Gérez votre inventaire et votre catalogue de produits. {count} produits trouvés.",
+    "viewProductToastTitle": "Voir le produit",
+    "viewProductToastDescription": "Affichage du produit avec l'ID: {id}",
+    "table": {
+      "loading": "Chargement des produits...",
+      "searchPlaceholder": "Rechercher des produits...",
+      "filterByCategory": "Filtrer par catégorie",
+      "allCategories": "Toutes les catégories",
+      "sortBy": "Trier par",
+      "sort": {
+        "nameAsc": "Nom (A-Z)",
+        "nameDesc": "Nom (Z-A)",
+        "priceAsc": "Prix (croissant)",
+        "priceDesc": "Prix (décroissant)",
+        "stockAsc": "Stock (croissant)",
+        "stockDesc": "Stock (décroissant)",
+        "updatedAtDesc": "Récemment mis à jour"
+      },
+      "activeOnly": "Actif seulement",
+      "addProduct": "Ajouter un produit",
+      "headerProduct": "Produit",
+      "headerCategory": "Catégorie",
+      "headerPrice": "Prix",
+      "headerStock": "Stock",
+      "headerStatus": "Statut",
+      "headerLastUpdated": "Dernière mise à jour",
+      "noProducts": "Aucun produit trouvé.",
+      "lowStock": "Stock faible",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "openMenu": "Ouvrir le menu",
+      "view": "Voir",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "deleting": "Suppression...",
+      "loadMore": "Charger plus"
+    },
+    "form": {
+      "editTitle": "Modifier le produit",
+      "addTitle": "Ajouter un nouveau produit",
+      "saveChanges": "Enregistrer les modifications",
+      "createProduct": "Créer le produit",
+      "cancel": "Annuler",
+      "labels": {
+        "productName": "Nom du produit *",
+        "barcode": "Code-barres",
+        "category": "Catégorie *",
+        "price": "Prix *",
+        "cost": "Coût *",
+        "currentStock": "Stock actuel *",
+        "minStock": "Niveau de stock minimum *",
+        "unit": "Unité *",
+        "status": "Statut du produit",
+        "description": "Description"
+      },
+      "placeholders": {
+        "productName": "Entrez le nom du produit",
+        "barcode": "Entrez le code-barres",
+        "selectCategory": "Sélectionnez une catégorie",
+        "price": "0.00",
+        "cost": "0.00",
+        "stock": "0",
+        "minStock": "0",
+        "selectUnit": "Sélectionnez une unité",
+        "description": "Entrez la description du produit"
+      },
+      "units": {
+        "pcs": "Pièces",
+        "kg": "Kilogrammes",
+        "g": "Grammes",
+        "l": "Litres",
+        "ml": "Millilitres",
+        "box": "Boîte",
+        "pack": "Paquet",
+        "set": "Ensemble"
+      },
+      "status": {
+        "active": "Le produit est actif et visible",
+        "inactive": "Le produit est inactif et masqué",
+        "activeLabel": "Actif",
+        "inactiveLabel": "Inactif"
+      },
+      "validation": {
+        "name": "Le nom doit comporter au moins 2 caractères",
+        "price": "Le prix doit être un nombre positif",
+        "cost": "Le coût doit être un nombre positif",
+        "category": "La catégorie est requise",
+        "stock": "Le stock ne peut pas être négatif",
+        "minStock": "Le niveau de stock minimum ne peut pas être négatif",
+        "unit": "L'unité est requise"
+      },
+      "toast": {
+        "updateSuccess": "Produit mis à jour avec succès",
+        "createSuccess": "Produit créé avec succès",
+        "saveError": "Échec de l'enregistrement du produit"
+      }
+    }
+  },
+  "Sales": {
+    "title": "Ventes"
+  },
+  "Reports": {
+    "title": "Rapports"
+  },
+  "Admin": {
+    "title": "Admin"
+  },
+  "Settings": {
+    "title": "Paramètres",
+    "language": "Langue"
+  }
+}

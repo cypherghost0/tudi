@@ -1,0 +1,86 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to get user role safely
+    function getUserRole(uid) {
+      return exists(/databases/$(database)/documents/users/$(uid)) ?
+        get(/databases/$(database)/documents/users/$(uid)).data.get('role', 'user') :
+        'user';
+    }
+    
+    // Helper function to check if this is the user's own document
+    function isOwnDocument(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+    
+    // Helper function to check if user is admin
+    function isAdmin() {
+      return request.auth != null && getUserRole(request.auth.uid) == 'admin';
+    }
+    
+    // Helper function to check if user is cashier or admin
+    function isCashierOrAdmin() {
+      return request.auth != null && 
+             (getUserRole(request.auth.uid) == 'cashier' || 
+              getUserRole(request.auth.uid) == 'admin');
+    }
+
+    // Users collection
+    match /users/{userId} {
+      // Allow users to read their own document, or admins to read any document
+      allow read: if request.auth != null &&
+                     (request.auth.uid == userId ||
+                      (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+                       get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') == 'admin'));
+      
+      // Allow users to create their own document during signup
+      allow create: if request.auth != null && request.auth.uid == userId;
+      
+      // Allow users to update their own document, or admins to update any document
+      allow update: if request.auth != null &&
+                       (request.auth.uid == userId ||
+                        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+                         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') == 'admin'));
+    }
+
+    // Products collection
+    match /products/{productId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && 
+                      (getUserRole(request.auth.uid) == 'cashier' || 
+                       getUserRole(request.auth.uid) == 'admin');
+    }
+
+    // Sales collection
+    match /sales/{saleId} {
+      allow read: if request.auth != null && 
+                     (getUserRole(request.auth.uid) == 'cashier' || 
+                      getUserRole(request.auth.uid) == 'admin' ||
+                      resource.data.soldBy == request.auth.uid);
+      allow write: if request.auth != null && 
+                      (getUserRole(request.auth.uid) == 'cashier' || 
+                       getUserRole(request.auth.uid) == 'admin');
+    }
+
+    // Customers collection
+    match /customers/{customerId} {
+      allow read, create, update: if request.auth != null && 
+                                     (getUserRole(request.auth.uid) == 'cashier' || 
+                                      getUserRole(request.auth.uid) == 'admin');
+    }
+
+    // Categories collection
+    match /categories/{categoryId} {
+      allow read: if request.auth != null;
+    }
+
+    // System settings collection
+    match /system/{document} {
+      // Allow unauthenticated read access to system settings (needed for signup page)
+      allow read: if true;
+      // Only admins can write system settings
+      allow write: if request.auth != null && getUserRole(request.auth.uid) == 'admin';
+    }
+  }
+}
