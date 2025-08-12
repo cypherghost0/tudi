@@ -1,6 +1,6 @@
 # 🏪 Loken - Offline-First Stock Management & POS System
 
-A modern, offline-capable point of sale system designed for electronic components stores. Built with Next.js, Firebase, and Cloudinary.
+A modern, offline-capable point of sale system designed for stationery stores. Built with Next.js, Firebase, and Cloudinary.
 
 ## ✨ Features
 
@@ -10,7 +10,7 @@ A modern, offline-capable point of sale system designed for electronic component
 - **🖼️ Image Management**: Cloudinary integration for product images
 - **📊 Analytics**: Comprehensive sales reporting and analytics
 - **🔒 Secure**: Firebase Authentication with role-based protection
-- **📦 Inventory Management**: Complete product catalog with stock tracking
+- **📦 Inventory Management**: Complete stationery product catalog with stock tracking
 
 ## 🚀 Quick Start
 
@@ -48,7 +48,7 @@ A modern, offline-capable point of sale system designed for electronic component
    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
    NEXT_PUBLIC_CLOUDINARY_API_KEY=your_api_key
    CLOUDINARY_API_SECRET=your_api_secret
-   NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=loken_products
+   NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=tudi_products
    ```
 
 4. **Run the development server**
@@ -106,7 +106,7 @@ loken/
 ### Cloudinary Setup
 
 1. Create a Cloudinary account
-2. Create an unsigned upload preset named `loken_products`
+2. Create an unsigned upload preset named `tudi_products`
 3. Add your Cloudinary config to environment variables
 
 ## 📱 PWA Features
@@ -181,7 +181,7 @@ For support and questions:
 
 ---
 
-**Built with ❤️ for electronic components stores**
+**Built with ❤️ for stationery stores**
 # godwin
 # godwin
 # godwin

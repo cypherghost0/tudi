@@ -1,6 +1,6 @@
 # Firebase Authentication Setup
 
-This guide will help you set up Firebase Authentication for the Loken application.
+This guide will help you set up Firebase Authentication for the Tudi Papeterie application.
 
 ## Prerequisites
 

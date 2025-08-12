@@ -1,7 +1,7 @@
 {
-  "name": "Tudi Electronique - Stock Management & POS",
-  "short_name": "Tudi Electronique",
-  "description": "Offline-first stock management and point of sale system for electronic components",
+  "name": "Tudi Papeterie - Stock Management & POS",
+  "short_name": "Tudi Papeterie",
+  "description": "Offline-first stock management and point of sale system for stationery products",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

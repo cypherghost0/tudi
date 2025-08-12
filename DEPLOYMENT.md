@@ -1,4 +1,4 @@
-# 🚀 Loken POS System - Deployment Guide
+# 🚀 Tudi Papeterie POS System - Deployment Guide
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Set up Cloudinary and add these environment variables:
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
 NEXT_PUBLIC_CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
-NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=loken_products
+NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=tudi_products
 ```
 
 ## Deployment Steps
@@ -54,7 +54,7 @@ git push origin main
 ### 3. Post-Deployment Setup
 
 1. **Firebase Security Rules**: Update your Firestore rules
-2. **Cloudinary Upload Preset**: Create an unsigned upload preset named `loken_products`
+2. **Cloudinary Upload Preset**: Create an unsigned upload preset named `tudi_products`
 3. **Test the Application**: Verify all features work in production
 
 ## Firebase Security Rules
@@ -96,9 +96,9 @@ service cloud.firestore {
 
 1. Create an unsigned upload preset:
    - Go to Settings > Upload
-   - Create new upload preset named `loken_products`
+   - Create new upload preset named `tudi_products`
    - Set signing mode to "Unsigned"
-   - Set folder to `loken/products`
+   - Set folder to `tudi/products`
 
 ## Testing Checklist
 
@@ -139,4 +139,4 @@ For issues or questions:
 
 ---
 
-**🎉 Your Loken POS system is now ready for production use!** 
+**🎉 Your Tudi Papeterie POS system is now ready for production use!**
