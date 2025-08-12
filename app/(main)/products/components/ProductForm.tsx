@@ -883,7 +883,7 @@ export function ProductForm({ initialData, onSuccess, onCancel }: ProductFormPro
                                             className="mt-2 w-full"
                                         >
                                             <X className="h-4 w-4 mr-2" />
-                                            Supprimer l'image
+                                            Supprimer l&apos;image
                                         </Button>
                                     </div>
                                 )}

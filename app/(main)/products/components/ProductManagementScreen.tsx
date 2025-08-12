@@ -65,7 +65,7 @@ export function ProductManagementScreen({ isCashier = false }: ProductManagement
         }
 
         return query(q, ...constraints);
-    }, [filters.category, filters.isActive, filters.sortBy, filters.sortOrder, lastDoc]);
+    }, [filters.category, filters.isActive, filters.sortBy, filters.sortOrder, filters.search, lastDoc]);
 
     const loadProducts = useCallback(async (isInitial = false) => {
         try {
@@ -132,12 +132,12 @@ export function ProductManagementScreen({ isCashier = false }: ProductManagement
 
     useEffect(() => {
         loadCategories();
-    }, []);
+    }, [loadCategories]);
 
     useEffect(() => {
         setLastDoc(null); // Reset pagination when filters change
         loadProducts(true);
-    }, [filters.category, filters.isActive, filters.sortBy, filters.sortOrder, filters.search]);
+    }, [filters.category, filters.isActive, filters.sortBy, filters.sortOrder, filters.search, loadProducts]);
 
     const handleFilterChange = (newFilters: ProductFilters) => {
         setFilters(newFilters);
