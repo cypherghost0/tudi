@@ -87,7 +87,7 @@ export function MainLayoutContent({ children }: { children: ReactNode }) {
                                 <Package className="h-4 w-4" />
                             </div>
                             <div className="flex flex-col min-w-0">
-                                <h2 className="text-sm font-semibold truncate">Tudi Electronique</h2>
+                                <h2 className="text-sm font-semibold truncate">Tudi Papeterie</h2>
                                 <p className="text-xs text-muted-foreground truncate">
                                     {userProfile?.role === 'admin' ? 'Administrator' : 'Cashier'}
                                 </p>
