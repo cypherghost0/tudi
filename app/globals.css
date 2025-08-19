@@ -120,3 +120,32 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Animations pour l'écran splash */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-loading-bar {
+  animation: loading-bar 2s linear forwards;
+}
